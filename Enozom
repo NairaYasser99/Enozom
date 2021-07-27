@@ -1,0 +1,21 @@
+import numpy as np
+import hashlib
+
+
+
+array=np.array(ThirdColumnOddRows)
+array=arr.reshape(1,-1)
+string = ""
+
+
+array2=[]
+for i in range(0,array.shape[1]):
+  array2.append(str(array[0][i]))
+
+string = ""
+for i in array2:
+    string = string + str(i)
+print(string)
+
+result = hashlib.md5(string.encode())
+print(result.hexdigest())
